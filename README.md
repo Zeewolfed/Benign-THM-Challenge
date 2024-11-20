@@ -55,13 +55,11 @@ UserName="Bell" OR UserName="Amelia" OR UserName="Deepak")
 | stats count by UserName`
 
 This returned the following suspicious usernames:
-
-```
+`
 Amel1a
 Chris.fort
 Daina
-
-```
+`
 
 Answer: The imposter user is Amel1a.
 
