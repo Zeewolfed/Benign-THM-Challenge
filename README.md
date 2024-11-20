@@ -48,11 +48,12 @@ Answer: 13,959 logs were ingested during the month of March 2022.
 
 To identify the imposter user, I searched for usernames not in the list of known users:
 
-`index=win_eventlogs EventID=4688
+```index=win_eventlogs EventID=4688
 NOT (UserName="James" OR UserName="Moin" OR UserName="Katrina" OR
 UserName="Haroon" OR UserName="Chris" OR UserName="Diana" OR
 UserName="Bell" OR UserName="Amelia" OR UserName="Deepak")
-| stats count by UserName`
+| stats count by UserName
+```
 
 This returned the following suspicious usernames:
 ```
@@ -153,4 +154,3 @@ hxxps[://]controlc[.]com/e4d11035
 
 *The investigation involved identifying suspicious activities in the HR department's compromised host. By reviewing the logs and searching for specific execution patterns (e.g., use of Certutil.exe and schtasks.exe), we were able to determine the presence of a malicious user and the payload involved. The exploitation utilized a legitimate system tool to bypass security controls and download a payload from a third-party server.*
 
-*Ref 1: Network Diagram*
