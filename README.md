@@ -55,10 +55,11 @@ UserName="Bell" OR UserName="Amelia" OR UserName="Deepak")
 | stats count by UserName`
 
 This returned the following suspicious usernames:
--Amel1a
--Chris.fort
--Daina
-
+```
+Amel1a,
+Chris.fort,
+Daina
+```
 
 Answer: The imposter user is Amel1a.
 
@@ -68,7 +69,9 @@ This command returns a unique list of values for a specific field.
 Useful when you want to see all distinct values for a field (e.g., unique usernames).
 `index=win_eventlogs EventID=4688
 | stats values(UserName)`
+
 or
+
 This command counts the occurrences of events grouped by a specific field
 Useful when you need to know how many times a specific field (like a user) appears in the logs.
 `index=win_eventlogs EventID=4688
