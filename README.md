@@ -20,7 +20,7 @@ Learn more about Splunk and how to investigate the logs.
 
 - Splunk
 
-## Steps
+## Solution Steps
 Overview:
 
 A host from the HR department was compromised, and suspicious activities were observed on the system. These activities included the execution of scheduled tasks, which confirmed the initial suspicion. The process execution logs were pulled using Event ID: 4688 and ingested into Splunk under the index win_eventlogs for further investigation.
